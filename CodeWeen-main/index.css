@@ -1,0 +1,167 @@
+/* Corpo da página */
+body {
+  background-image: url(img/background.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Formulário de login e cadastro */
+
+
+
+/* Inputs do formulário */
+#loginForm input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ff8800;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+}
+
+#loginForm input:focus {
+  outline: none;
+  border-color: #ff8800;
+  box-shadow: 0 0 10px rgba(255, 136, 0, 0.6);
+}
+
+/* Botões de Login e Registrar */
+#loginButton, #registerButton {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #ff8800;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#loginButton:hover, #registerButton:hover {
+  background-color: #ff6600;
+}
+
+#errorMessage {
+  color: red;
+  font-size: 14px;
+}
+
+/* Tela do Jogo */
+#gameScreen {
+  display: none; /* Inicialmente oculta */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para dar destaque ao jogo */
+  box-shadow: 0 0 15px rgba(255, 136, 0, 0.6);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Estilo das cartas */
+.cards {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.cards img {
+  display: flex;
+  text-align: center;
+}
+
+#gameContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* Exibição do nome do jogador e imagem do avatar */
+#userInfo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #ff8800;
+}
+
+#userInfo p {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+#playerIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff8800;
+  margin-top: 10px;
+}
+
+/* Botão para visualizar as estatísticas */
+#viewStatsButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff8800;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#viewStatsButton:hover {
+  background-color: #ff6600;
+}
+
+/* Estilo para o overlay de Game Over */
+#gameOverOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(img/jumpscare.png);
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+#gameOverOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}

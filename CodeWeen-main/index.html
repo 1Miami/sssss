@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Game of the Year</title>
+</head>
+<body>
+    <div id="authForm">
+        <div id="loginForm">
+            <input type="email" id="email" placeholder="E-mail" />
+            <input type="password" id="password" placeholder="Senha" />
+            <button id="loginButton">Login</button>
+            <button id="registerButton">Registrar</button>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <div id="gameScreen" style="display: none;">
+        <div id="gameContent">
+            <div id="leftSide">
+                <div class="cards" id="rock"><img id="Rock" src="img/Rock2.png" alt="Rock" /></div>
+                <div class="cards" id="paper"><img id="Throw" src="img/Paper2.png" alt="Paper" /></div>
+                <div class="cards" id="scissors"><img id="Scissors" src="img/Scissors2.png" alt="Scissors" /></div>
+            </div>
+            <div id="rightSide"><div id="cardEnemy"><img id="throw2" src="img/monsterHand.png" alt="Monster Hand" /></div></div>
+        </div>
+
+        <div id="userInfo">
+            <p id="loggedInUserName">Bem-vindo, <span id="userName"></span></p>
+            <img id="playerIcon" src="img/player/Player1Fase.jpg" alt="Player Icon" />
+        </div>
+        <button id="viewStatsButton" style="display: none;">Ver Estatísticas</button>
+    </div>
+
+    <div id="gameOverOverlay" style="display: none;">
+        <audio id="gameOverSound" src="audio/Goofy ahh sound.mp3"></audio>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

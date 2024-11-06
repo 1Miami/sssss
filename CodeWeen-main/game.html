@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./pai.css" rel="stylesheet">
+    <title>Jogo - Pedra, Papel, Tesoura</title>
+</head>
+<body>
+    <!-- Exibição do nome e foto do usuário -->
+    <div id="user-info">
+        <h2 id="user-name"></h2>
+        <img id="user-photo" src="" alt="Foto do usuário" width="50">
+    </div>
+
+    <!-- Opção para ver o histórico de vitórias e derrotas -->
+    <button id="view-stats-btn">Ver Histórico</button>
+    <div id="stats" style="display:none;">
+        <p>Vitórias: <span id="victories"></span></p>
+        <p>Derrotas: <span id="defeats"></span></p>
+    </div>
+
+    <!-- Controles do jogo -->
+    <div>
+        <h2>Escolha uma carta</h2>
+        <button id="Rock">Pedra</button>
+        <button id="Throw">Papel</button>
+        <button id="Scissors">Tesoura</button>
+    </div>
+
+    <!-- Aqui ficam as imagens do monstro, coração etc -->
+    <img id="monster" src="img/monsterHand.png" alt="Monstro">
+    <script src="../js/game.js"></script>
+</body>
+</html>
