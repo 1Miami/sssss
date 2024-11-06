@@ -1,0 +1,16 @@
+Database abaixo
+CREATE TABLE users ( 
+id INT AUTO_INCREMENT PRIMARY KEY, 
+email VARCHAR(255) NOT NULL, 
+password VARCHAR(255) NOT NULL, 
+name VARCHAR(255), photo VARCHAR(255), 
+victories INT DEFAULT 0, 
+defeats INT DEFAULT 0 );
+
+
+
+
+CREATE TABLE games ( 
+id INT AUTO_INCREMENT PRIMARY KEY, 
+user_id INT, 
+result ENUM('win', 'lose', 'draw'), FOREIGN KEY (user_id) REFERENCES users(id) );
